@@ -10,7 +10,15 @@
 
 <body>
     <script>
+        var mensaje = "primer mensaje";
 
+        function nuevoMensaje() {
+            var mensaje = "mensaje nuevo";
+            alert('Entre en la funcion con: ' + mensaje);
+        }
+        nuevoMensaje();
+
+        alert('Fuera de la funcion ' + mensaje);
     </script>
 </body>
 
