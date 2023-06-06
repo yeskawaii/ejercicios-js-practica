@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+  font-size: 1.5vw;
+}
+
+nav {
+  margin: 0;
+  height: 20vh;
+}
+
+.nav-center {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  background-color: black;
+  font-size: 1.2vw;
+  color: aliceblue;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+nav h4 {
+  color: aqua;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  list-style: none;
+}
+
+a {
+  margin: 5vh;
+  text-decoration: none;
+  color: aliceblue;
+}
+
+a:hover {
+  color: turquoise;
+}
+
+.btn {
+  font-size: 2vw;
+  background: none;
+  border-radius: 10px;
+  border-width: 4px;
+}
+
+.btn:hover {
+  border-width: 5px;
+}
