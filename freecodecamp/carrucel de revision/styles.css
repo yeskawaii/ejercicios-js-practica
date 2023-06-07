@@ -1,0 +1,122 @@
+body {
+  margin: 0;
+  background-color: aliceblue;
+}
+
+section {
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.person {
+  width: 10vw;
+  height: 10vw;
+  box-shadow: 10px -10px 15px rgb(69, 122, 236);
+  border-radius: 50%;
+}
+
+.icon img {
+  position: absolute;
+  top: -5px;
+  left: -35px;
+  color: #ff0000;
+  font-size: 24px;
+  z-index: 1;
+  width: 10vh;
+}
+
+h2 {
+  margin: 0 0 2.5vh 0;
+}
+
+p {
+  text-align: center;
+  font-size: 1.2vw;
+}
+
+.underline {
+  width: 8vw;
+  height: 0.5vh;
+  border-radius: 15px;
+  background-color: rgb(61, 193, 233);
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8vw;
+}
+
+.review {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5vh 0;
+  background-color: white;
+  width: 40vw;
+  height: 55vh;
+  border-radius: 25px;
+  padding: 2vw;
+}
+
+.img-container {
+  position: relative;
+  display: inline-block;
+}
+
+.fas {
+  font-size: 1.5vw;
+  color: rgb(61, 193, 233);
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.fas:hover {
+  transform: scale(1.5);
+}
+
+.prev-btn {
+  border: none;
+  background: none;
+  transition: transform 0.1s;
+  margin: 0px 2.5vw;
+}
+
+.prev-btn:active {
+  transform: scale(1.5);
+}
+
+.next-btn {
+  border: none;
+  background: none;
+  transition: transform 0.1s;
+  margin: 0px 2.5vw;
+}
+
+.next-btn:active {
+  transform: scale(1.5);
+}
+
+.random-btn {
+  font-size: 1vw;
+  margin: 1.5vh 0px;
+  background-color: rgb(61, 193, 233, 50%);
+  border-radius: 15px;
+  border-color: rgb(61, 193, 233);
+  cursor: pointer;
+  transition: transfrom 0.5s;
+  color: rgb(41, 131, 158);
+}
+
+.random-btn:active {
+  transform: scale(0.9);
+}
