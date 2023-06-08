@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)),
+    url("https://fondosmil.com/fondo/17010.jpg");
+  background-size: cover;
+  overflow: hidden;
+}
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: aliceblue;
+  padding: 1.5em;
+  width: 30em;
+  height: 15em;
+  border-radius: 25px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1.5em;
+}
+
+.banner button {
+  font-size: 1.2em;
+  border: none;
+  padding: 0.8em;
+  border-radius: 25px;
+  cursor: pointer;
+  color: aliceblue;
+  background-color: rgb(49, 65, 204);
+  font-weight: 600;
+  transition: transform ease-in;
+}
+
+button:active {
+  transform: scale(0.955);
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(49, 65, 204, 0.5);
+  display: grid;
+  place-items: center;
+  font-size: 25px;
+  visibility: hidden;
+  z-index: -10;
+}
+
+.modal-container {
+  position: relative;
+  display: grid;
+  place-items: center;
+  background-color: aliceblue;
+  height: 35vh;
+  width: 45vw;
+  border-radius: 25px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 2.5em;
+  border: none;
+  background: none;
+  color: rgb(204, 27, 27);
+  cursor: pointer;
+}
+
+.open-modal {
+  visibility: visible;
+  z-index: 10;
+}
