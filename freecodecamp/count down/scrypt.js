@@ -24,7 +24,7 @@ const weekdays = [
 
 const giveaway = document.querySelector(".giveaway");
 const deadline = document.querySelector(".deadline");
-const items = document.querySelector(".deadline-format h4");
+const items = document.querySelectorAll(".deadline-format h4");
 
 let futureDate = new Date(2028, 4, 24, 11, 30, 0);
 
@@ -33,6 +33,42 @@ const hours = futureDate.getHours();
 const minutes = futureDate.getMinutes();
 
 let month = futureDate.getMonth();
-console.log(months[month - 1]);
+month = months[month];
+const date = futureDate.getDate();
 
-giveaway.textContent = `giveaway ends on ${year} ${hours}:${minutes}am`;
+const weekday = weekdays[futureDate.getDay()];
+
+giveaway.textContent = `giveaway ends on ${date} ${month} ${weekday} ${year} ${hours}:${minutes}am`;
+
+//future time in ms
+const futureTime = futureDate.getTime();
+
+function getRemainingTime() {
+  const today = new Date().getTime();
+  const t = futureTime - today;
+  console.log(t);
+  //1s = 1000ms
+  //1M = 60S
+  //1HR = 60MIN
+  //1d = 24hr
+
+  //values in ms
+  const oneDay = 24 * 60 * 60 * 1000;
+  const oneHour = 60 * 60 * 1000;
+  const oneMinute = 60 * 1000;
+  //calculate all values
+  let days = t / oneDay;
+  days = Math.floor(days);
+  let hours = Math.floor((t % oneDay) / oneHour);
+  let minutes = Math.floor((t % oneHour) / oneMinute);
+  let seconds = Math.floor((t % oneMinute) / 1000);
+
+  // set vallues array;
+  const values = [days, hours, minutes, seconds];
+
+  items.forEach(function (item, index) {
+    item.innerHTML = values[index];
+  });
+}
+
+getRemainingTime();
